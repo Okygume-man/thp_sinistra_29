@@ -1,0 +1,25 @@
+<html>
+  
+	<head>
+    	<title>The Gossip Project</title>
+  	</head>
+  
+	<body>
+    
+    	<h1>Salut la fouine, tu es ici sur le SUPA-WEB-SITE des potins de THP !</h1>
+    
+    	<h2> Si tu veux tu peux attendre, jouer au stalker 
+    	 et voir apparaître des potins magiques
+    
+    		<ul>
+			<% gossips.each do |gossip| %>
+				<li>Auteur : <%=  gossip.gossip_author %><br>
+			Gossip : <a href="/gossips/<%= id + 1 %>"><em><%=  gossip.gossip_content  %></em></a></li><br>
+				<% end %>
+			</ul>
+
+			Ou alors tu peux en <a href="/gossips/new/">créer</a> ! C'est quand même plus chouette <3 </h2>
+
+	</body>
+
+</html>
